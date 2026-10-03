@@ -39,6 +39,15 @@
     };
 
     behaviors {
+        ctrl_rclick: ctrl_rclick {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&mkp>;
+            display-name = "Ctrl / Right Click";
+        };
+
         layer_click: layer_click {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -251,7 +260,7 @@
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &mmv MOVE_Y(600)  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSPACE
 &kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &mmv MOVE_X(-600)  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp ENTER
 &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &mmv MOVE_X(600)  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-&kp LC(LEFT_ALT)  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 1  &mkp LCLK  &layer_click 2 LCLK  &kp B  &kp SPACE  &kp RIGHT_GUI  &kp RIGHT_ALT
+&kp LC(LEFT_ALT)  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 1  &mkp LCLK  &mkp LCLK  &ctrl_rclick LCTRL RCLK  &lt 2 B  &mt RIGHT_GUI SPACE  &kp RIGHT_ALT  &none
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -260,11 +269,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &kp GRAVE  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_DOWN  &kp PG_UP  &kp END  &kp UP  &kp HOME  &kp MINUS  &kp EQUAL
-&trans  &kp TILDE  &kp APOS  &trans  &trans  &mkp MB5  &mmv MOVE_LEFT  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &rgb_ug RGB_SPI  &mmv MOVE_RIGHT  &kp PG_UP  &kp PG_DN  &kp HOME  &kp END  &kp INSERT  &trans
-&kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp DELETE
+&trans  &kp GRAVE  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_DOWN  &kp PG_UP  &kp LA(LEFT)  &kp UP  &kp LA(RIGHT)  &kp MINUS  &kp EQUAL
+&trans  &kp TILDE  &kp APOS  &kp LG(C)  &kp LG(V)  &mkp LCLK  &mmv MOVE_LEFT  &kp LG(LEFT)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LG(RIGHT)  &kp RIGHT_BRACKET
+&trans  &trans  &kp LG(X)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &mmv MOVE_RIGHT  &kp PG_UP  &kp PG_DN  &kp HOME  &kp END  &kp INSERT  &trans
+&kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &mkp RCLK  &trans  &trans  &kp RIGHT_SHIFT  &kp LG(RIGHT_BRACKET)  &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -275,8 +284,8 @@
             bindings = <
 &kp TILDE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
 &mo 5  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &trans  &mmv MOVE_DOWN  &trans  &trans  &kp LG(L)  &kp F11  &kp F12  &kp PLUS
-&trans  &kp C_PLAY_PAUSE  &trans  &trans  &trans  &trans  &mmv MOVE_LEFT  &kp LG(LEFT_BRACKET)  &kp LG(W)  &kp LG(LS(T))  &kp LG(RIGHT_BRACKET)  &kp LBRC  &kp RBRC
-&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp C_PLAY_PAUSE  &kp LA(LEFT_BRACKET)  &kp LA(BSLH)  &kp LA(RIGHT_BRACKET)  &trans  &mmv MOVE_LEFT  &kp LG(LEFT_BRACKET)  &kp LG(W)  &kp LG(LS(T))  &kp LG(RIGHT_BRACKET)  &kp LBRC  &kp RBRC
+&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &kp LC(MINUS)  &kp LC(EQUAL)  &kp LC(N0)  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
             >;
 
