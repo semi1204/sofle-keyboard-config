@@ -370,7 +370,7 @@
 &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp DELETE
 &trans  &kp GRAVE  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_DOWN  &kp PG_UP  &kp LA(LEFT)  &kp UP  &kp LA(RIGHT)  &kp MINUS  &kp EQUAL
 &trans  &kp TILDE  &kp APOS  &kp LG(C)  &kp LG(V)  &mkp LCLK  &mmv MOVE_LEFT  &kp LG(LEFT)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LG(RIGHT)  &kp RIGHT_BRACKET
-&trans  &trans  &kp LG(X)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &mmv MOVE_RIGHT  &kp PG_UP  &kp PG_DN  &kp HOME  &kp END  &kp INSERT  &trans
+&trans  &trans  &kp LG(X)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &mmv MOVE_RIGHT  &kp ENTER  &kp PG_DN  &kp HOME  &kp END  &kp INSERT  &trans
 &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &mkp RCLK  &trans  &trans  &kp RIGHT_SHIFT  &kp LG(RIGHT_BRACKET)  &trans
             >;
 
