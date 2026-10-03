@@ -131,6 +131,48 @@
     };
 
     macros {
+        pair_parens: pair_parens {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+        };
+        pair_braces: pair_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+        };
+        pair_brackets: pair_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+        };
+        pair_double_quotes: pair_double_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp DQT &kp DQT &kp LEFT>;
+        };
+        pair_single_quotes: pair_single_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp APOS &kp APOS &kp LEFT>;
+        };
+        pair_angles: pair_angles {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp LT &kp GT &kp LEFT>;
+        };
         delete_word: delete_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -228,8 +270,8 @@
         layer_3 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp EXCL  &trans  &trans  &trans  &trans  &trans  &kp QMARK  &kp DQT  &kp APOS  &kp MINUS  &kp PLUS  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &symbol_arrow  &kp LPAR  &kp LBRC  &kp LBKT  &kp EQUAL  &trans
+&trans  &kp EXCL  &trans  &trans  &trans  &trans  &trans  &kp QMARK  &pair_double_quotes  &pair_single_quotes  &kp MINUS  &kp PLUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &symbol_arrow  &pair_parens  &pair_braces  &pair_brackets  &kp EQUAL  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &symbol_and  &kp COLON  &symbol_or  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
@@ -242,7 +284,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp AT  &kp HASH  &kp DLLR  &kp TILDE  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp STAR  &kp GRAVE  &kp EXCL  &kp LT  &kp UNDER  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp STAR  &kp GRAVE  &kp EXCL  &pair_angles  &kp UNDER  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
