@@ -89,9 +89,9 @@ layers:
   - PG UP
   - Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
-  - Alt+$$mdi:arrow-right-bold$$
-  - {t: '-', s: _}
-  - {t: '=', s: +}
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
   - {t: '$$mdi:transfer$$', type: trans}
   - '~'
   - {t: '''', s: '"'}
@@ -102,9 +102,9 @@ layers:
   - Gui+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - Gui+$$mdi:arrow-right-bold$$
-  - {t: ']', s: '}'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: X, h: '$$mdi:apple-keyboard-command$$'}
@@ -115,9 +115,9 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - PG DN
   - HOME
-  - END
-  - Ins
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -129,7 +129,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
   - {t: 'Gui+]', s: 'Gui+}'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
   LAYER2:
   - '~'
   - '&bt_channel_1'
