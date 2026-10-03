@@ -80,6 +80,22 @@
             display-name = "Auto B / Mac-Win Layer";
         };
 
+        auto_back: auto_back {
+            compatible = "zmk,behavior-profile-modifier";
+            #binding-cells = <0>;
+            windows-profile = <1>;
+            bindings = <&kp LG(LEFT_BRACKET)>, <&kp C_AC_BACK>;
+            display-name = "Auto Back";
+        };
+
+        auto_forward: auto_forward {
+            compatible = "zmk,behavior-profile-modifier";
+            #binding-cells = <0>;
+            windows-profile = <1>;
+            bindings = <&kp LG(RIGHT_BRACKET)>, <&kp C_AC_FORWARD>;
+            display-name = "Auto Forward";
+        };
+
         layer_click: layer_click {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -95,6 +111,22 @@
             tap-ms = <100>;
             cw-binding = <&msc MOVE_Y(-40)>;
             ccw-binding = <&msc MOVE_Y(40)>;
+        };
+
+        rsr_history: rsr_history {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <20>;
+            cw-binding = <&auto_forward>;
+            ccw-binding = <&auto_back>;
+        };
+
+        rsr_horizontal: rsr_horizontal {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <100>;
+            cw-binding = <&msc MOVE_X(40)>;
+            ccw-binding = <&msc MOVE_X(-40)>;
         };
 
         rsr_tabs: rsr_tabs {
@@ -317,7 +349,7 @@
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &mmv MOVE_Y(600)  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSPACE
 &kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &mmv MOVE_X(-600)  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp ENTER
 &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &mmv MOVE_X(600)  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-&kp LC(LEFT_ALT)  &auto_option  &auto_command  &kp SPACE  &mo 1  &mkp LCLK  &mkp LCLK  &ctrl_rclick LCTRL RCLK  &auto_b  &auto_space  &kp RIGHT_ALT  &none
+&kp LC(LEFT_ALT)  &auto_option  &auto_command  &kp SPACE  &mo 1  &mkp LCLK  &layer_click 3 LCLK  &ctrl_rclick LCTRL RCLK  &auto_b  &auto_space  &kp RIGHT_ALT  &none
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -333,7 +365,7 @@
 &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &mkp RCLK  &trans  &trans  &kp RIGHT_SHIFT  &kp LG(RIGHT_BRACKET)  &trans
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&rsr_history &rsr_trans>;
             display-name = "LAYER1";
         };
 
@@ -360,7 +392,7 @@
             >;
 
             display-name = "LAYER3";
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            sensor-bindings = <&rsr_horizontal &rsr_trans>;
         };
 
         layer_4 {
