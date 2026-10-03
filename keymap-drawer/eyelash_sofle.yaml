@@ -217,8 +217,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '?'
-  - '"'
-  - {t: '''', s: '"'}
+  - '&pair_double_quotes'
+  - '&pair_single_quotes'
   - {t: '-', s: _}
   - +
   - {t: '$$mdi:transfer$$', type: trans}
@@ -230,9 +230,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&symbol_arrow'
-  - (
-  - '{'
-  - {t: '[', s: '{'}
+  - '&pair_parens'
+  - '&pair_braces'
+  - '&pair_brackets'
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -291,7 +291,7 @@ layers:
   - '*'
   - {t: '`', s: '~'}
   - '!'
-  - <
+  - '&pair_angles'
   - _
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
