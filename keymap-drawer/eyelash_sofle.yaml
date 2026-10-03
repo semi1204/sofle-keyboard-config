@@ -52,7 +52,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Ctl+$$mdi:apple-keyboard-option$$
   - '&auto_option'
   - '&auto_command'
@@ -62,9 +62,9 @@ layers:
   - {t: '$$mdi:mouse-left-click-outline$$', h: LAYER3}
   - {t: '$$mdi:mouse-right-click-outline$$', h: '$$mdi:apple-keyboard-control$$'}
   - '&auto_b'
-  - '&auto_space'
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&auto_right_command'
   - '&auto_right_alt'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   LAYER1:
   - {t: '`', s: '~'}
   - F1
