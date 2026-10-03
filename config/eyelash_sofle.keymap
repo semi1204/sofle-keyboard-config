@@ -72,11 +72,20 @@
             display-name = "Auto Space / Cmd-Ctrl";
         };
 
+        b_layer: b_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+            display-name = "B / Layer";
+        };
+
         auto_b: auto_b {
             compatible = "zmk,behavior-profile-modifier";
             #binding-cells = <0>;
             windows-profile = <1>;
-            bindings = <&lt 6 B>, <&lt 2 B>;
+            bindings = <&b_layer 6 B>, <&b_layer 2 B>;
             display-name = "Auto B / Mac-Win Layer";
         };
 
