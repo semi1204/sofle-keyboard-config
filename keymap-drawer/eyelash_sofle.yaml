@@ -63,7 +63,7 @@ layers:
   - {t: '$$mdi:mouse-right-click-outline$$', h: '$$mdi:apple-keyboard-control$$'}
   - '&auto_b'
   - '&auto_space'
-  - $$mdi:apple-keyboard-option$$
+  - '&auto_right_alt'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   LAYER1:
   - {t: '`', s: '~'}
