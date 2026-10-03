@@ -60,11 +60,11 @@ layers:
   - $$mdi:keyboard-space$$
   - LAYER1
   - $$mdi:mouse-left-click-outline$$
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:mouse-left-click-outline$$', h: LAYER2}
+  - B
   - $$mdi:keyboard-space$$
   - RIGHT GUI
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:backspace-reverse-outline$$
   LAYER1:
   - {t: '`', s: '~'}
   - F1
@@ -190,7 +190,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
