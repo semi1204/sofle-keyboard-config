@@ -42,9 +42,9 @@
         rsr_vol: rsr_vol {
             compatible = "zmk,behavior-runtime-sensor-rotate";
             #sensor-binding-cells = <0>;
-            tap-ms = <5>;
-            cw-binding = <&kp C_VOL_UP>;
-            ccw-binding = <&kp C_VOL_DN>;
+            tap-ms = <100>;
+            cw-binding = <&msc MOVE_Y(-40)>;
+            ccw-binding = <&msc MOVE_Y(40)>;
         };
 
         rsr_trans: rsr_trans {
@@ -57,6 +57,73 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_sd_symbols {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&mo 3>;
+            layers = <0>;
+        };
+        combo_jn_symbols {
+            timeout-ms = <50>;
+            key-positions = <34 46>;
+            bindings = <&mo 4>;
+            layers = <0>;
+        };
+        combo_kl_option {
+            timeout-ms = <50>;
+            key-positions = <35 36>;
+            bindings = <&kp LEFT_ALT>;
+            layers = <0>;
+        };
+        combo_df_command {
+            timeout-ms = <50>;
+            key-positions = <29 30>;
+            bindings = <&kp RIGHT_GUI>;
+            layers = <0>;
+        };
+        combo_jk_delete_word {
+            timeout-ms = <50>;
+            key-positions = <34 35>;
+            bindings = <&delete_word>;
+            layers = <0>;
+        };
+        combo_jl_delete_line {
+            timeout-ms = <50>;
+            key-positions = <34 36>;
+            bindings = <&delete_line>;
+            layers = <0>;
+        };
+        combo_zx_caps_lock {
+            timeout-ms = <50>;
+            key-positions = <40 41>;
+            bindings = <&kp CAPS>;
+            layers = <0>;
+        };
+        combo_xc_escape {
+            timeout-ms = <30>;
+            key-positions = <41 42>;
+            bindings = <&kp ESC>;
+            layers = <0>;
+        };
+        combo_paste_style {
+            timeout-ms = <50>;
+            key-positions = <37 38>;
+            bindings = <&kp LG(LS(V))>;
+            layers = <0>;
+        };
+        combo_qw_escape {
+            timeout-ms = <30>;
+            key-positions = <14 15>;
+            bindings = <&kp ESC>;
+            layers = <0>;
+        };
+        combo_comma_dot_enter {
+            timeout-ms = <50>;
+            key-positions = <48 49>;
+            bindings = <&kp ENTER>;
+            layers = <0>;
+        };
+
         softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
@@ -64,6 +131,42 @@
     };
 
     macros {
+        delete_word: delete_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp LA(LEFT) &kp LA(LS(RIGHT)) &kp BACKSPACE>;
+        };
+        delete_line: delete_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp LG(LEFT) &kp LG(LEFT) &kp LS(DOWN) &kp BACKSPACE>;
+        };
+        symbol_arrow: symbol_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp EQUAL &kp GT>;
+        };
+        symbol_and: symbol_and {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp AMPERSAND &kp AMPERSAND>;
+        };
+        symbol_or: symbol_or {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <40>;
+            wait-ms = <40>;
+            bindings = <&kp PIPE &kp PIPE>;
+        };
+
         SHIFT_MCLK: SHIFT_MCLK {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -85,11 +188,11 @@
 
         layer0 {
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
-&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mmv MOVE_Y(-600)  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSLH
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &mmv MOVE_Y(600)  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSPACE
+&kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &mmv MOVE_X(-600)  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp ENTER
+&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &mmv MOVE_X(600)  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&kp LC(LEFT_ALT)  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp SPACE  &mo 1  &mkp LCLK  &kp RIGHT_SHIFT  &kp SPACE  &kp RIGHT_GUI  &kp RIGHT_ALT  &kp DELETE
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -98,11 +201,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &kp GRAVE  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_DOWN  &kp PG_UP  &kp END  &kp UP  &kp HOME  &kp MINUS  &kp EQUAL
+&trans  &kp TILDE  &trans  &trans  &trans  &mkp MB5  &mmv MOVE_LEFT  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11  &kp F12  &trans
+&kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -111,11 +214,11 @@
 
         layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &bt BT_CLR  &bt BT_CLR_ALL  &trans  &trans  &trans  &mmv MOVE_DOWN  &trans  &trans  &kp F11  &kp F12  &kp UNDER  &kp PLUS
+&trans  &out OUT_USB  &out OUT_BLE  &trans  &trans  &trans  &mmv MOVE_LEFT  &trans  &trans  &trans  &trans  &kp LBRC  &kp RBRC
+&trans  &sys_reset  &trans  &bootloader  &trans  &trans  &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "LAYER2";
@@ -124,11 +227,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp EXCL  &trans  &trans  &trans  &trans  &trans  &kp QMARK  &kp DQT  &kp APOS  &kp MINUS  &kp PLUS  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &symbol_arrow  &kp LPAR  &kp LBRC  &kp LBKT  &kp EQUAL  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &symbol_and  &kp COLON  &symbol_or  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "LAYER3";
@@ -137,11 +240,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp AT  &kp HASH  &kp DLLR  &kp TILDE  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp STAR  &kp GRAVE  &kp EXCL  &kp LT  &kp UNDER  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "LAYER4";
