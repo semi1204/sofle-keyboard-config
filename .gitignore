@@ -1,6 +1,7 @@
 build/
 zmk/
-modules/
+modules/*
+!modules/profile-modifiers/
 tools/
 .west/
 .omo

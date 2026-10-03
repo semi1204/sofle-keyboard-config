@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: MIT
+
+description: |
+  Select exactly two bindings for BLE profiles, preserving the pressed binding through release.
+  Binding 0 is the default; binding 1 is selected for the configured Windows profile.
+compatible: "zmk,behavior-profile-modifier"
+
+include: zero_param.yaml
+
+properties:
+  bindings:
+    type: phandle-array
+    required: true
+  windows-profile:
+    type: int
+    required: true
