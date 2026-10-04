@@ -175,7 +175,7 @@ layers:
   - {t: Ctl+=, s: Ctl++}
   - {t: Ctl+0, s: Ctl+)}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:apple-keyboard-shift$$
+  - PLAY PAUSE
   - '&auto_forward'
   - '&auto_reopen_tab'
   - '&auto_close_tab'
