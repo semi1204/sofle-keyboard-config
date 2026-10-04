@@ -243,11 +243,18 @@ static int on_binding_released(struct zmk_behavior_binding *binding,
 }
 
 #if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
-static const struct behavior_parameter_value_metadata param_values[] = {{
-    .display_name = "X Y",
-    .type = BEHAVIOR_PARAMETER_VALUE_TYPE_RANGE,
-    .range = {.min = 0, .max = UINT32_MAX},
-}};
+static const struct behavior_parameter_value_metadata param_values[] = {
+    {
+        .display_name = "Scroll Down 30",
+        .type = BEHAVIOR_PARAMETER_VALUE_TYPE_VALUE,
+        .value = MOVE_Y(-30),
+    },
+    {
+        .display_name = "Scroll Up 30",
+        .type = BEHAVIOR_PARAMETER_VALUE_TYPE_VALUE,
+        .value = MOVE_Y(30),
+    },
+};
 
 static const struct behavior_parameter_metadata_set param_metadata_set[] = {{
     .param1_values = param_values,

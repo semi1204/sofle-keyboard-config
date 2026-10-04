@@ -6,6 +6,7 @@ the original sensor timestamp, so this measures dispatch spacing rather than
 the exact hardware detent time. `rsr_vol` uses `tap-ms = <0>` to avoid adding a
 100 ms queue delay of its own.
 
-Saved Studio/NVS encoder bindings can override keymap defaults. After flashing,
-select the updated `rsr_vol` binding in Studio for each layer where accelerated
-volume scrolling should apply.
+Saved Studio/NVS encoder settings can override keymap defaults. For each layer
+where accelerated scrolling should apply, edit that encoder's runtime-rotate
+binding in Studio: choose Rate Scroll with “Scroll Down 30” for clockwise and
+“Scroll Up 30” for counter-clockwise, and set its tap delay to 0 ms.
