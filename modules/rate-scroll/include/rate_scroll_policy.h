@@ -5,7 +5,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define RATE_SCROLL_MAX_MULTIPLIER 4
+#define RATE_SCROLL_MAX_MULTIPLIER 3
 #define RATE_SCROLL_MAX_ACTIVE_SPEED 16000
 
 static inline int rate_scroll_multiplier(int64_t interval_ms, int previous_direction,
@@ -29,9 +29,6 @@ static inline int rate_scroll_multiplier(int64_t interval_ms, int previous_direc
     }
     if (interval_ms >= 50) {
         return 2;
-    }
-    if (interval_ms >= 25) {
-        return 3;
     }
     return RATE_SCROLL_MAX_MULTIPLIER;
 }

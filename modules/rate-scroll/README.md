@@ -1,6 +1,6 @@
 # Rate Scroll
 
-`&rate_scroll` scales the vertical `&msc` speed from 1× to 4× using the time
+`&rate_scroll` scales the vertical `&msc` speed from 1× to 3× using the time
 between dispatched encoder detents. The runtime sensor behavior queue replaces
 the original sensor timestamp, so this measures dispatch spacing rather than
 the exact hardware detent time. `rsr_vol` uses `tap-ms = <0>` to avoid adding a
