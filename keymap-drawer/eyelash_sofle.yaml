@@ -151,38 +151,38 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - '&auto_line_start'
   - Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
   - Alt+$$mdi:arrow-right-bold$$
-  - PG UP
-  - '&auto_back'
-  - '&auto_forward'
+  - '&auto_previous_tab'
+  - '&auto_next_tab'
   - $$mdi:apple-keyboard-caps$$
   - PLAY PAUSE
   - {t: 'Gui+[', s: 'Gui+{'}
   - {t: Gui+\, s: Gui+|}
   - {t: 'Gui+]', s: 'Gui+}'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - '&auto_back'
+  - '&auto_line_end'
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - PG DN
-  - '&auto_line_start'
-  - '&auto_line_end'
+  - '&auto_back'
+  - '&auto_forward'
   - $$mdi:apple-keyboard-shift$$
   - {t: Ctl+-, s: Ctl+_}
   - {t: Ctl+=, s: Ctl++}
   - {t: Ctl+0, s: Ctl+)}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - '&auto_previous_tab'
-  - '&auto_next_tab'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&auto_forward'
+  - '&auto_reopen_tab'
+  - '&auto_close_tab'
+  - '&auto_address_bar'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
