@@ -72,7 +72,7 @@ layers:
   - F3
   - F4
   - F5
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F6
   - F7
   - F8
@@ -85,10 +85,10 @@ layers:
   - KP PLUS
   - '*'
   - {t: /, s: '?'}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - PG UP
-  - Alt+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - (
+  - {t: '[', s: '{'}
+  - '{'
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
@@ -98,10 +98,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '=', s: +}
   - $
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - Gui+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - )
+  - {t: ']', s: '}'}
+  - '}'
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
@@ -111,7 +111,7 @@ layers:
   - '#'
   - '&'
   - {t: \, s: '|'}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - ':'
   - {t: ',', s: <}
   - {t: ., s: '>'}
@@ -128,7 +128,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
-  - {t: 'Gui+]', s: 'Gui+}'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '0', s: )}
   LAYER2:
   - '~'
@@ -154,9 +154,9 @@ layers:
   - Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-up-bold$$
   - Alt+$$mdi:arrow-right-bold$$
-  - Ctl+$$mdi:arrow-right-bold$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:keyboard-tab$$
+  - PG UP
+  - '&auto_back'
+  - '&auto_forward'
   - $$mdi:apple-keyboard-caps$$
   - PLAY PAUSE
   - {t: 'Gui+[', s: 'Gui+{'}
@@ -167,19 +167,19 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $$mdi:arrow-right-bold$$
-  - '{'
-  - '}'
+  - PG DN
+  - '&auto_line_start'
+  - '&auto_line_end'
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: Ctl+-, s: Ctl+_}
   - {t: Ctl+=, s: Ctl++}
   - {t: Ctl+0, s: Ctl+)}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - '&auto_previous_tab'
+  - '&auto_next_tab'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
