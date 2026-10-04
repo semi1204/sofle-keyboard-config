@@ -57,7 +57,7 @@ layers:
   - '&auto_option'
   - '&auto_command'
   - $$mdi:keyboard-space$$
-  - LAYER1
+  - {t: '$$mdi:keyboard-esc$$', h: LAYER1}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:mouse-left-click-outline$$', h: LAYER3}
   - {t: '$$mdi:mouse-right-click-outline$$', h: '$$mdi:apple-keyboard-control$$'}
