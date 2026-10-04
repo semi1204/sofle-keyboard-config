@@ -94,8 +94,8 @@ layers:
   - {t: '9', s: (}
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
-  - <
-  - '>'
+  - {t: '''', s: '"'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '=', s: +}
   - $
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
