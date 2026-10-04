@@ -218,6 +218,14 @@
             display-name = "Auto Window Right";
         };
 
+        auto_window_full: auto_window_full {
+            compatible = "zmk,behavior-profile-modifier";
+            #binding-cells = <0>;
+            windows-profile = <1>;
+            bindings = <&kp LA(BSLH)>, <&kp LC(UP)>;
+            display-name = "Auto Window Full";
+        };
+
         layer_click: layer_click {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -581,7 +589,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &auto_window_left  &trans  &trans  &auto_window_right  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &auto_window_full  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
