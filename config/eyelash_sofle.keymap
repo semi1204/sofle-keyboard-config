@@ -445,7 +445,7 @@
             bindings = <
 &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp DELETE
 &trans  &kp GRAVE  &kp MINUS  &kp KP_PLUS  &kp STAR  &kp FSLH  &mmv MOVE_DOWN  &kp PG_UP  &kp LA(LEFT)  &kp UP  &kp N7  &kp N8  &kp N9
-&trans  &kp EXCL  &kp LT  &kp GT  &kp EQUAL  &kp DLLR  &mmv MOVE_LEFT  &kp LG(LEFT)  &kp LEFT  &kp DOWN  &kp N4  &kp N5  &kp N6
+&trans  &kp EXCL  &kp APOS  &none  &kp EQUAL  &kp DLLR  &mmv MOVE_LEFT  &kp LG(LEFT)  &kp LEFT  &kp DOWN  &kp N4  &kp N5  &kp N6
 &trans  &kp TILDE  &kp PIPE  &kp HASH  &kp AMPS  &kp BSLH  &mmv MOVE_RIGHT  &kp COLON  &kp COMMA  &kp DOT  &kp N1  &kp N2  &kp N3
 &kp LEFT_ALT  &trans  &trans  &trans  &trans  &none  &none  &none  &trans  &kp RIGHT_SHIFT  &kp LG(RIGHT_BRACKET)  &kp N0
             >;
