@@ -144,45 +144,45 @@ layers:
   - F9
   - F10
   - $$mdi:keyboard-tab$$
-  - MANAGE
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-low$$
-  - $$mdi:volume-high$$
-  - $$mdi:volume-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - F11
-  - Ctl+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
-  - Ctl+$$mdi:arrow-right-bold$$
-  - AC BACK
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - PLAY PAUSE
-  - {t: 'Alt+[', s: 'Alt+{'}
-  - {t: Alt+\, s: Alt+|}
-  - {t: 'Alt+]', s: 'Alt+}'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', s: '~'}
+  - {t: '-', s: _}
+  - +
+  - '*'
+  - {t: /, s: '?'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - Alt+$$mdi:arrow-left-bold$$
+  - $$mdi:arrow-up-bold$$
+  - Alt+$$mdi:arrow-right-bold$$
+  - {t: '7', s: '&'}
+  - {t: '8', s: '*'}
+  - {t: '9', s: (}
+  - $$mdi:apple-keyboard-caps$$
+  - '!'
+  - <
+  - '>'
+  - {t: '=', s: +}
+  - $
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: 'Gui+[', s: 'Gui+{'}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - '{'
-  - '}'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
+  - $$mdi:apple-keyboard-shift$$
+  - '~'
+  - '|'
+  - '#'
+  - '&'
+  - {t: \, s: '|'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: Ctl+-, s: Ctl+_}
-  - {t: Ctl+=, s: Ctl++}
-  - {t: Ctl+0, s: Ctl+)}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - ':'
+  - {t: ',', s: <}
+  - {t: ., s: '>'}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -194,7 +194,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '0', s: )}
   LAYER3:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -339,7 +339,7 @@ layers:
   - F9
   - F10
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
   - BT CLR ALL
   - {t: '$$mdi:transfer$$', type: trans}
@@ -387,7 +387,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   MAC:
