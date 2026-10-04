@@ -145,7 +145,7 @@ layers:
   - F10
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '!'
   - '@'
   - '#'
   - $
