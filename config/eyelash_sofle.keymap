@@ -499,7 +499,7 @@
 &kp TILDE  &bt_channel_1  &bt_channel_2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp TAB
 &kp TAB  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp LEFT_ALT  &trans  &mmv MOVE_DOWN  &auto_line_end  &kp LA(LEFT)  &kp UP  &kp LA(RIGHT)  &auto_previous_tab  &auto_next_tab
 &kp CAPS  &kp C_PLAY_PAUSE  &kp LG(LEFT_BRACKET)  &kp LG(BSLH)  &kp LG(RIGHT_BRACKET)  &trans  &auto_back  &auto_line_start  &kp LEFT  &kp DOWN  &kp RIGHT  &auto_back  &auto_forward
-&kp LSHFT  &kp LC(MINUS)  &kp LC(EQUAL)  &kp LC(N0)  &trans  &trans  &auto_forward  &auto_reopen_tab  &auto_close_tab  &auto_address_bar  &none  &none  &none
+&kp LSHFT  &kp LC(MINUS)  &kp LC(EQUAL)  &kp LC(N0)  &trans  &kp LSHFT  &auto_forward  &auto_reopen_tab  &auto_close_tab  &auto_address_bar  &none  &none  &none
 &trans  &trans  &trans  &trans  &trans  &none  &none  &none  &trans  &trans  &trans  &trans
             >;
 
