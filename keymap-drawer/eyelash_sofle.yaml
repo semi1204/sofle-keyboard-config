@@ -147,7 +147,7 @@ layers:
   - $$mdi:keyboard-tab$$
   - {t: '`', s: '~'}
   - {t: '-', s: _}
-  - +
+  - KP PLUS
   - '*'
   - {t: /, s: '?'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
