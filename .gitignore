@@ -2,6 +2,7 @@ build/
 zmk/
 modules/*
 !modules/profile-modifiers/
+!modules/rate-scroll/
 tools/
 .west/
 .omo

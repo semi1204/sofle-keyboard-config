@@ -1,0 +1,5 @@
+if(CONFIG_ZMK_BEHAVIOR_RATE_SCROLL)
+  zephyr_library()
+  zephyr_library_include_directories(include ${APPLICATION_SOURCE_DIR}/include)
+  zephyr_library_sources(src/behavior_rate_scroll.c)
+endif()

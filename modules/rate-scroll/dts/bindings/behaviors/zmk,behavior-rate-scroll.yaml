@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: MIT
+
+description: Rate-aware vertical scroll pulse for rotary sensor bindings
+compatible: "zmk,behavior-rate-scroll"
+
+include: one_param.yaml
+
+properties:
+  scroll-behavior:
+    type: phandle
+    required: true
+  pulse-ms:
+    type: int
+    required: true

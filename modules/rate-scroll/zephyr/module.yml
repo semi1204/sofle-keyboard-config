@@ -1,0 +1,6 @@
+name: zmk-behavior-rate-scroll
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    dts_root: .
