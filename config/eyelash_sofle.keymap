@@ -444,10 +444,10 @@
         layer_1 {
             bindings = <
 &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp DELETE
-&trans  &kp GRAVE  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4  &mmv MOVE_DOWN  &kp PG_UP  &kp LA(LEFT)  &kp UP  &kp N7  &kp N8  &kp N9
-&trans  &kp TILDE  &kp APOS  &kp LG(C)  &kp LG(V)  &mkp LCLK  &mmv MOVE_LEFT  &kp LG(LEFT)  &kp LEFT  &kp DOWN  &kp N4  &kp N5  &kp N6
-&trans  &trans  &kp LG(X)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans  &mmv MOVE_RIGHT  &kp ENTER  &kp PG_DN  &kp HOME  &kp N1  &kp N2  &kp N3
-&kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans  &mkp RCLK  &trans  &trans  &kp RIGHT_SHIFT  &kp LG(RIGHT_BRACKET)  &kp N0
+&trans  &kp GRAVE  &kp MINUS  &kp KP_PLUS  &kp STAR  &kp FSLH  &mmv MOVE_DOWN  &kp PG_UP  &kp LA(LEFT)  &kp UP  &kp N7  &kp N8  &kp N9
+&trans  &kp EXCL  &kp LT  &kp GT  &kp EQUAL  &kp DLLR  &mmv MOVE_LEFT  &kp LG(LEFT)  &kp LEFT  &kp DOWN  &kp N4  &kp N5  &kp N6
+&trans  &kp TILDE  &kp PIPE  &kp HASH  &kp AMPS  &kp BSLH  &mmv MOVE_RIGHT  &kp COLON  &kp COMMA  &kp DOT  &kp N1  &kp N2  &kp N3
+&kp LEFT_ALT  &trans  &trans  &trans  &trans  &none  &none  &none  &trans  &kp RIGHT_SHIFT  &kp LG(RIGHT_BRACKET)  &kp N0
             >;
 
             sensor-bindings = <&rsr_history &rsr_trans>;
@@ -457,10 +457,10 @@
         layer_2 {
             bindings = <
 &kp TILDE  &bt_channel_1  &bt_channel_2  &kp F3  &kp F4  &kp F5  &mmv MOVE_UP  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp TAB
-&kp TAB  &kp GRAVE  &kp MINUS  &kp KP_PLUS  &kp STAR  &kp FSLH  &mmv MOVE_DOWN  &kp LA(LEFT)  &kp UP  &kp LA(RIGHT)  &kp N7  &kp N8  &kp N9
-&kp CAPS  &kp EXCL  &kp LT  &kp GT  &kp EQUAL  &kp DLLR  &mmv MOVE_LEFT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp N4  &kp N5  &kp N6
-&kp LSHFT  &kp TILDE  &kp PIPE  &kp HASH  &kp AMPS  &kp BSLH  &mmv MOVE_RIGHT  &kp COLON  &kp COMMA  &kp DOT  &kp N1  &kp N2  &kp N3
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans  &kp N0
+&kp TAB  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &kp LEFT_ALT  &trans  &mmv MOVE_DOWN  &kp LA(LEFT)  &kp UP  &kp LA(RIGHT)  &kp LC(RIGHT)  &kp LEFT  &kp TAB
+&kp CAPS  &kp C_PLAY_PAUSE  &kp LG(LEFT_BRACKET)  &kp LG(BSLH)  &kp LG(RIGHT_BRACKET)  &trans  &mmv MOVE_LEFT  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT  &kp LBRC  &kp RBRC
+&kp LSHFT  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_RIGHT  &kp LC(MINUS)  &kp LC(EQUAL)  &kp LC(N0)  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &none  &none  &none  &trans  &trans  &trans  &trans
             >;
 
             display-name = "LAYER2";
