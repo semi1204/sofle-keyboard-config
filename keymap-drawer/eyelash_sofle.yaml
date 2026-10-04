@@ -87,8 +87,8 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - (
-  - {t: '[', s: '{'}
   - '{'
+  - {t: '[', s: '{'}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
@@ -100,8 +100,8 @@ layers:
   - $
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - )
-  - {t: ']', s: '}'}
   - '}'
+  - {t: ']', s: '}'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
