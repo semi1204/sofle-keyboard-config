@@ -82,6 +82,15 @@
             display-name = "Space / Shift";
         };
 
+        space_fn2: space_fn2 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Space / Fn2";
+        };
+
         auto_right_command: auto_right_command {
             compatible = "zmk,behavior-profile-modifier";
             #binding-cells = <0>;
@@ -160,8 +169,8 @@
             compatible = "zmk,behavior-runtime-sensor-rotate";
             #sensor-binding-cells = <0>;
             tap-ms = <100>;
-            cw-binding = <&msc MOVE_Y(-40)>;
-            ccw-binding = <&msc MOVE_Y(40)>;
+            cw-binding = <&msc MOVE_Y(-30)>;
+            ccw-binding = <&msc MOVE_Y(30)>;
         };
 
         rsr_history: rsr_history {
@@ -399,8 +408,8 @@
 &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &mmv MOVE_UP  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BSLH
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &mmv MOVE_DOWN  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSPACE
 &kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &mmv MOVE_LEFT  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp ENTER
-&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &mmv MOVE_RIGHT  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-&kp LC(LEFT_ALT)  &auto_option  &auto_command  &kp SPACE  &mo 1  &mkp LCLK  &layer_click 3 LCLK  &ctrl_rclick LCTRL RCLK  &auto_b  &space_shift RIGHT_SHIFT SPACE  &auto_right_command  &auto_right_alt
+&kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &mmv MOVE_RIGHT  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+&kp LC(LEFT_ALT)  &auto_option  &auto_command  &kp SPACE  &mo 1  &mkp LCLK  &layer_click 3 LCLK  &ctrl_rclick LCTRL RCLK  &auto_b  &space_fn2 2 SPACE  &auto_right_command  &auto_right_alt
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -439,7 +448,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &pair_double_quotes  &pair_single_quotes  &kp MINUS  &kp PLUS  &trans
 &trans  &kp EXCL  &trans  &trans  &kp QMARK  &trans  &trans  &symbol_arrow  &pair_parens  &pair_braces  &pair_brackets  &kp EQUAL  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &symbol_and  &kp COLON  &symbol_or  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp UNDER  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "LAYER3";
