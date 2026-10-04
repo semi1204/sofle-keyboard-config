@@ -146,10 +146,10 @@ layers:
   - $$mdi:keyboard-tab$$
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-low$$
-  - $$mdi:volume-high$$
-  - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '@'
+  - '#'
+  - $
+  - '~'
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&auto_line_end'
   - Alt+$$mdi:arrow-left-bold$$
@@ -158,11 +158,11 @@ layers:
   - '&auto_previous_tab'
   - '&auto_next_tab'
   - $$mdi:apple-keyboard-caps$$
-  - PLAY PAUSE
-  - {t: 'Gui+[', s: 'Gui+{'}
-  - {t: Gui+\, s: Gui+|}
-  - {t: 'Gui+]', s: 'Gui+}'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '*'
+  - {t: '`', s: '~'}
+  - '!'
+  - '&pair_angles'
+  - _
   - '&auto_back'
   - '&auto_line_start'
   - $$mdi:arrow-left-bold$$
