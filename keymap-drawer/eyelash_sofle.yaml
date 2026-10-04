@@ -159,9 +159,9 @@ layers:
   - '&auto_next_tab'
   - $$mdi:apple-keyboard-caps$$
   - '*'
-  - {t: '`', s: '~'}
-  - '!'
-  - '&pair_angles'
+  - $$mdi:volume-low$$
+  - $$mdi:volume-off$$
+  - $$mdi:volume-high$$
   - _
   - '&auto_back'
   - '&auto_line_start'
