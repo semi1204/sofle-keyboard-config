@@ -588,7 +588,7 @@ layers:
 combos:
 - p: [13, 27]
   k: OUT USB
-  l: [LAYER2]
+  l: [LAYER1]
 - p: [28, 29]
   k: LAYER3
   l: [LAYER0]
