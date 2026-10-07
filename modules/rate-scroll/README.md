@@ -8,5 +8,5 @@ the exact hardware detent time. `rsr_vol` uses `tap-ms = <0>` to avoid adding a
 
 Saved Studio/NVS encoder settings can override keymap defaults. For each layer
 where accelerated scrolling should apply, edit that encoder's runtime-rotate
-binding in Studio: choose Rate Scroll with “Scroll Down 25” for clockwise and
-“Scroll Up 25” for counter-clockwise, and set its tap delay to 0 ms.
+binding in Studio: choose Rate Scroll with “Scroll Down 20” for clockwise and
+“Scroll Up 20” for counter-clockwise, and set its tap delay to 0 ms.
