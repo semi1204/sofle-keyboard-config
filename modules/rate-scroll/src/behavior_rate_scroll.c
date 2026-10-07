@@ -245,14 +245,14 @@ static int on_binding_released(struct zmk_behavior_binding *binding,
 #if IS_ENABLED(CONFIG_ZMK_BEHAVIOR_METADATA)
 static const struct behavior_parameter_value_metadata param_values[] = {
     {
-        .display_name = "Scroll Down 30",
+        .display_name = "Scroll Down 25",
         .type = BEHAVIOR_PARAMETER_VALUE_TYPE_VALUE,
-        .value = MOVE_Y(-30),
+        .value = MOVE_Y(-25),
     },
     {
-        .display_name = "Scroll Up 30",
+        .display_name = "Scroll Up 25",
         .type = BEHAVIOR_PARAMETER_VALUE_TYPE_VALUE,
-        .value = MOVE_Y(30),
+        .value = MOVE_Y(25),
     },
 };
 

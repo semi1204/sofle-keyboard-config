@@ -5,10 +5,13 @@
 int main(void) {
     assert(rate_scroll_multiplier(0, 0, 1, false, 1) == 1); /* first detent */
     assert(rate_scroll_multiplier(100, 1, 1, true, 4) == 1); /* idle reset */
+    assert(rate_scroll_multiplier(80, 1, 1, true, 2) == 1); /* slow detent */
+    assert(rate_scroll_multiplier(79, 1, 1, true, 1) == 2); /* acceleration boundary */
     assert(rate_scroll_multiplier(75, 1, 1, true, 1) == 2);
-    assert(rate_scroll_multiplier(49, 1, 1, true, 2) == 3);
-    assert(rate_scroll_multiplier(24, 1, 1, true, 3) == 3);
+    assert(rate_scroll_multiplier(49, 1, 1, true, 2) == 2);
+    assert(rate_scroll_multiplier(24, 1, 1, true, 3) == 2);
     assert(rate_scroll_multiplier(0, 1, 1, true, 2) == 2); /* same-tick batch */
+    assert(rate_scroll_multiplier(0, 1, 1, true, 3) == 2); /* capped batch */
     assert(rate_scroll_multiplier(20, 1, -1, true, 4) == 1); /* direction reversal */
 
     assert(rate_scroll_clamp_increment(15900, 1000) == 100);
