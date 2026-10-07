@@ -276,11 +276,11 @@
         compatible = "zmk,combos";
 
         // Keep USB output reachable independently of the base B hold behavior.
-        combo_fn2_usb_output {
+        combo_fn1_usb_output {
             timeout-ms = <50>;
             key-positions = <13 27>;
             bindings = <&out OUT_USB>;
-            layers = <2>;
+            layers = <1>;
         };
         combo_sd_symbols {
             timeout-ms = <50>;
