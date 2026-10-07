@@ -275,11 +275,11 @@
     combos {
         compatible = "zmk,combos";
 
-        // Keep USB output reachable independently of the base B hold behavior.
-        combo_fn1_usb_output {
+        // Keep Fn1 Tab management access reachable even with a saved runtime keymap.
+        combo_fn1_manage {
             timeout-ms = <50>;
-            key-positions = <13 27>;
-            bindings = <&out OUT_USB>;
+            key-positions = <13>;
+            bindings = <&mo 5>;
             layers = <1>;
         };
         combo_sd_symbols {
@@ -486,7 +486,7 @@
         layer_1 {
             bindings = <
 &kp GRAVE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp DELETE
-&trans  &kp GRAVE  &kp MINUS  &kp KP_PLUS  &kp STAR  &kp FSLH  &none  &kp LPAR  &kp LBRC  &kp LBKT  &kp N7  &kp N8  &kp N9
+&mo 5  &kp GRAVE  &kp MINUS  &kp KP_PLUS  &kp STAR  &kp FSLH  &none  &kp LPAR  &kp LBRC  &kp LBKT  &kp N7  &kp N8  &kp N9
 &trans  &kp EXCL  &kp APOS  &none  &kp EQUAL  &kp DLLR  &none  &kp RPAR  &kp RBRC  &kp RBKT  &kp N4  &kp N5  &kp N6
 &trans  &kp TILDE  &kp PIPE  &kp HASH  &kp AMPS  &kp BSLH  &none  &kp COLON  &kp COMMA  &kp DOT  &kp N1  &kp N2  &kp N3
 &kp LEFT_ALT  &trans  &trans  &trans  &trans  &none  &none  &none  &trans  &kp RIGHT_SHIFT  &trans  &kp N0
