@@ -35,7 +35,7 @@ struct rate_scroll_pulse {
 struct rate_scroll_sensor_state {
     bool has_previous;
     int direction;
-    int multiplier;
+    int scale_percent;
     int64_t last_ms;
     int32_t active_speed;
 };
@@ -184,13 +184,12 @@ static int on_binding_pressed(struct zmk_behavior_binding *binding,
     const int64_t now_ms = event.timestamp > 0 ? event.timestamp : k_uptime_get();
 
     k_mutex_lock(&data->lock, K_FOREVER);
+    release_due_pulses(data, now_ms);
     struct rate_scroll_sensor_state *sensor = &data->sensors[sensor_id];
     const bool reversed = sensor->has_previous && sensor->direction != direction;
     const int64_t interval_ms = sensor->has_previous ? now_ms - sensor->last_ms : 0;
-    const int multiplier = reversed
-                               ? 1
-                               : rate_scroll_multiplier(interval_ms, sensor->direction, direction,
-                                                        sensor->has_previous, sensor->multiplier);
+    const int scale_percent = rate_scroll_scale_percent(
+        interval_ms, sensor->direction, direction, sensor->has_previous, sensor->scale_percent);
 
     if (reversed) {
         release_sensor_pulses(data, sensor_id, event);
@@ -198,10 +197,10 @@ static int on_binding_pressed(struct zmk_behavior_binding *binding,
 
     sensor->has_previous = true;
     sensor->direction = direction;
-    sensor->multiplier = multiplier;
+    sensor->scale_percent = scale_percent;
     sensor->last_ms = now_ms;
 
-    const int32_t requested = (int32_t)base_y * multiplier;
+    const int32_t requested = (int32_t)base_y * scale_percent / 100;
     const int32_t applied = rate_scroll_clamp_increment(sensor->active_speed, requested);
     if (applied == 0) {
         struct rate_scroll_pulse *pulse = find_sensor_pulse(data, sensor_id);
