@@ -469,7 +469,7 @@
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &auto_next_tab  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSPACE
 &kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &auto_back  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp ENTER
 &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &auto_forward  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-&kp LC(LEFT_ALT)  &auto_option  &auto_command  &kp SPACE  &lt 1 ESC  &mkp LCLK  &layer_click 3 LCLK  &mkp RCLK  &auto_b  &space_fn2 2 SPACE  &auto_right_command  &auto_right_alt
+&kp LC(LEFT_ALT)  &auto_option  &auto_command  &kp SPACE  &lt 1 ESC  &mkp LCLK  &layer_click 3 LCLK  &mkp LCLK  &auto_b  &space_fn2 2 SPACE  &auto_right_command  &auto_right_alt
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
