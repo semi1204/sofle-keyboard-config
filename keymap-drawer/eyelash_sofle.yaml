@@ -586,6 +586,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
+- p: [13, 27]
+  k: OUT USB
+  l: [LAYER2]
 - p: [28, 29]
   k: LAYER3
   l: [LAYER0]
