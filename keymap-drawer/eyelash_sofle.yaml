@@ -60,7 +60,7 @@ layers:
   - {t: '$$mdi:keyboard-esc$$', h: LAYER1}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:mouse-left-click-outline$$', h: LAYER3}
-  - $$mdi:mouse-right-click-outline$$
+  - $$mdi:mouse-left-click-outline$$
   - '&auto_b'
   - {t: '$$mdi:keyboard-space$$', h: LAYER2}
   - '&auto_right_command'
