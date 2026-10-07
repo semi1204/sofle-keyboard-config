@@ -44,15 +44,6 @@
     };
 
     behaviors {
-        ctrl_rclick: ctrl_rclick {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&mkp>;
-            display-name = "Ctrl / Right Click";
-        };
-
         auto_option: auto_option {
             compatible = "zmk,behavior-profile-modifier";
             #binding-cells = <0>;
@@ -112,21 +103,12 @@
             display-name = "Auto Right Alt / Alt";
         };
 
-        b_layer: b_layer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
-            display-name = "B / Layer";
-        };
-
         auto_b: auto_b {
             compatible = "zmk,behavior-profile-modifier";
             #binding-cells = <0>;
             windows-profile = <1>;
-            bindings = <&b_layer 6 B>, <&b_layer 2 B>;
-            display-name = "Auto B / Mac-Win Layer";
+            bindings = <&mt LCTRL B>, <&mt LEFT_ALT B>;
+            display-name = "Auto B / Ctrl";
         };
 
         auto_back: auto_back {
@@ -487,7 +469,7 @@
 &kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &auto_next_tab  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSPACE
 &kp CAPS  &kp A  &kp S  &kp D  &kp F  &kp G  &auto_back  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp ENTER
 &kp LSHFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &auto_forward  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-&kp LC(LEFT_ALT)  &auto_option  &auto_command  &kp SPACE  &lt 1 ESC  &mkp LCLK  &layer_click 3 LCLK  &ctrl_rclick LCTRL RCLK  &auto_b  &space_fn2 2 SPACE  &auto_right_command  &auto_right_alt
+&kp LC(LEFT_ALT)  &auto_option  &auto_command  &kp SPACE  &lt 1 ESC  &mkp LCLK  &layer_click 3 LCLK  &mkp RCLK  &auto_b  &space_fn2 2 SPACE  &auto_right_command  &auto_right_alt
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
